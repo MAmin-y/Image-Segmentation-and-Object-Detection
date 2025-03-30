@@ -1,2 +1,12 @@
-# Image-Segmentation-and-Object-Detection
-This repository contains implementations for image segmentation and object detection using deep learning. It implements Segmention using VGG-UNet model and employs Faster R-CNN with a ResNet50-FPN for object detectiong.
+# Brain Tumor Segmentation and Road Sign Detection
+
+Below are detailed explanations for each part of the project.
+
+## Part 1: MRI Brain Tumor Segmentation
+
+In this part, a brain tumor segmentation model is developed using transfer learning with a U-Net architecture. The model leverages a pre-trained VGG16 network as its encoder, forming a variant often referred to as VGG-UNet. The project involves preparing an MRI dataset of brain images, dividing it into training, validation, and testing subsets, and applying data augmentation techniques such as rotation, scaling, and intensity adjustments to enhance model robustness. Inspired by the paper "VGG-UNet for Brain Tumor Segmentation" (see [Telkomnika](https://telkomnika.uad.ac.id/index.php/TELKOMNIKA/article/view/14753/8142) and the corresponding Kaggle dataset), the network’s architecture is carefully constructed to capture both local and global features of the tumor regions. The training process incorporates specialized loss functions like Dice loss along with evaluation metrics such as the Intersection over Union (IoU) and Dice Coefficient to quantify the model’s segmentation performance. Visualizations of the segmented tumor masks against the ground truth are produced to illustrate the model’s efficacy.
+
+## Part 2: Road Sign Detection
+
+The second part of the project focuses on the detection of road signs using state-of-the-art object detection methods. Two approaches are implemented: a two-stage detector and a one-stage detector. The two-stage approach employs Faster R-CNN with a ResNet50-FPN backbone, while the one-stage method utilizes SSD300 with a VGG16 backbone. The project begins with the preparation of a road sign dataset (GTSDB), which involves organizing the images, annotating them, and performing exploratory data analysis to understand the distribution of different classes and object sizes. Advanced data augmentation strategies are applied to increase the diversity of the training data. The models are then fine-tuned using transfer learning techniques, and hyperparameters are adjusted to optimize performance. Evaluation is carried out using metrics such as mean Average Precision (mAP) and IoU, with detailed comparisons drawn between the two approaches. This methodology is informed by research such as the paper “Advanced Road Sign Detection Models Using Deep Learning” (refer to [IOPscience](https://iopscience.iop.org/article/10.1088/1742-6596/2646/1/012024) for further details), which highlights the trade-offs between detection accuracy and computational efficiency in different object detection frameworks.
+
